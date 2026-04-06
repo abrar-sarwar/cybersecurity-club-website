@@ -1,0 +1,128 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 16px 0;
+  transition: all var(--transition-base);
+}
+
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 1px 12px rgba(10, 22, 40, 0.06);
+  padding: 10px 0;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--blue-500);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.logoText {
+  color: var(--blue-900);
+}
+
+.logoAccent {
+  color: var(--blue-500);
+}
+
+.desktopLinks {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navLink {
+  padding: 8px 16px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--gray-600);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.navLink:hover {
+  color: var(--blue-500);
+  background: var(--blue-50);
+}
+
+.joinBtn {
+  margin-left: 8px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--blue-500);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  letter-spacing: 0.02em;
+}
+
+.joinBtn:hover {
+  background: var(--blue-600);
+  box-shadow: 0 4px 16px rgba(0, 85, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.menuBtn {
+  display: none;
+  color: var(--blue-900);
+  padding: 8px;
+}
+
+.mobileMenu {
+  display: none;
+  flex-direction: column;
+  padding: 8px 32px 24px;
+  gap: 4px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.98);
+}
+
+.mobileLink {
+  padding: 12px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--gray-700);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.mobileLink:hover {
+  background: var(--blue-50);
+  color: var(--blue-500);
+}
+
+@media (max-width: 768px) {
+  .desktopLinks {
+    display: none;
+  }
+
+  .menuBtn {
+    display: block;
+  }
+
+  .mobileMenu {
+    display: flex;
+  }
+
+  .inner {
+    padding: 0 20px;
+  }
+}
