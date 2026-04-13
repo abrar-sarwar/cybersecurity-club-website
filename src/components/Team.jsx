@@ -34,6 +34,7 @@ export default function Team() {
               </div>
               <h3 className={styles.name}>{member.name}</h3>
               <span className={styles.role}>{member.role}</span>
+              <span className={styles.year}>{member.year}</span>
               <span className={styles.viewProfile}>View Profile</span>
             </motion.div>
           ))}
@@ -69,30 +70,39 @@ export default function Team() {
                 <div>
                   <h3 className={styles.modalName}>{selected.name}</h3>
                   <span className={styles.modalRole}>{selected.role}</span>
+                {selected.year && <span className={styles.modalYear}>{selected.year}</span>}
                 </div>
               </div>
 
-              <div className={styles.modalSection}>
-                <h4 className={styles.modalLabel}>About</h4>
-                <p className={styles.modalText}>{selected.bio}</p>
-              </div>
-
-              <div className={styles.modalSection}>
-                <h4 className={styles.modalLabel}>Interests</h4>
-                <div className={styles.tags}>
-                  {selected.interests.split(', ').map(interest => (
-                    <span key={interest} className={styles.interestTag}>{interest}</span>
-                  ))}
+              {selected.bio && (
+                <div className={styles.modalSection}>
+                  <h4 className={styles.modalLabel}>About</h4>
+                  <p className={styles.modalText}>{selected.bio}</p>
                 </div>
-              </div>
+              )}
+
+              {selected.interests && (
+                <div className={styles.modalSection}>
+                  <h4 className={styles.modalLabel}>Interests</h4>
+                  <div className={styles.tags}>
+                    {selected.interests.split(', ').map(interest => (
+                      <span key={interest} className={styles.interestTag}>{interest}</span>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               <div className={styles.modalLinks}>
-                <a href={selected.linkedin} className={styles.linkBtn}>
-                  <ExternalLink size={18} /> LinkedIn
-                </a>
-                <a href={`mailto:${selected.email}`} className={styles.linkBtnSecondary}>
-                  <Mail size={18} /> Email
-                </a>
+                {selected.linkedin && selected.linkedin !== '#' && (
+                  <a href={selected.linkedin} className={styles.linkBtn}>
+                    <ExternalLink size={18} /> LinkedIn
+                  </a>
+                )}
+                {selected.email && (
+                  <a href={`mailto:${selected.email}`} className={styles.linkBtnSecondary}>
+                    <Mail size={18} /> Email
+                  </a>
+                )}
               </div>
             </motion.div>
           </motion.div>

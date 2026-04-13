@@ -24,7 +24,7 @@ export default function Hero() {
         >
           Cybersecurity
           <br />
-          <span className={styles.titleAccent}>Club at GSU</span>
+          <span className={styles.titleAccent}>Club GSU</span>
         </motion.h1>
 
         <motion.p
@@ -61,18 +61,13 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 1 }}
         >
           <div className={styles.stat}>
-            <span className={styles.statNumber}>150+</span>
+            <span className={styles.statNumber}>300+</span>
             <span className={styles.statLabel}>Members</span>
           </div>
           <div className={styles.statDivider} />
           <div className={styles.stat}>
-            <span className={styles.statNumber}>30+</span>
+            <span className={styles.statNumber}>20+</span>
             <span className={styles.statLabel}>Events/Year</span>
-          </div>
-          <div className={styles.statDivider} />
-          <div className={styles.stat}>
-            <span className={styles.statNumber}>5+</span>
-            <span className={styles.statLabel}>CTF Wins</span>
           </div>
         </motion.div>
       </div>

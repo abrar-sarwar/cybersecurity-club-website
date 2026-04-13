@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { Shield, Mail, MapPin, Globe, ExternalLink } from 'lucide-react';
+import { Mail, MapPin, Globe, ExternalLink } from 'lucide-react';
+import clubLogo from '../assets/Screenshot_2023-01-31_at_4.37.16_PM.png';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -16,7 +17,7 @@ export default function Footer() {
           >
             <h2 className={styles.ctaTitle}>Ready to defend the digital frontier?</h2>
             <p className={styles.ctaText}>
-              Join 150+ students building the future of cybersecurity at GSU
+              Join 300+ students building the future of cybersecurity at GSU
             </p>
             <div className={styles.ctaActions}>
               <a href="mailto:cyber@gsu.edu" className={styles.ctaPrimary}>
@@ -35,8 +36,8 @@ export default function Footer() {
         <div className={styles.inner}>
           <div className={styles.brand}>
             <div className={styles.logo}>
-              <Shield size={20} />
-              <span>GSU<span className={styles.logoAccent}>Cyber</span></span>
+              <img src={clubLogo} alt="Cybersecurity Club GSU" className={styles.logoImg} />
+              <span>Cybersecurity Club <span className={styles.logoAccent}>GSU</span></span>
             </div>
             <p className={styles.brandText}>
               Georgia State University's premier cybersecurity organization.

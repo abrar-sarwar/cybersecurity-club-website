@@ -119,6 +119,13 @@
   color: var(--blue-500);
 }
 
+.logoImg {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
 .logoAccent {
   color: var(--blue-500);
 }

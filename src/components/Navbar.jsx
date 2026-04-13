@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Shield, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import clubLogo from '../assets/Screenshot_2023-01-31_at_4.37.16_PM.png';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
@@ -30,8 +31,8 @@ export default function Navbar() {
     >
       <div className={styles.inner}>
         <a href="#" className={styles.logo}>
-          <Shield size={22} strokeWidth={2.5} />
-          <span className={styles.logoText}>GSU<span className={styles.logoAccent}>Cyber</span></span>
+          <img src={clubLogo} alt="Cybersecurity Club GSU" className={styles.logoImg} />
+          <span className={styles.logoText}>Cybersecurity Club <span className={styles.logoAccent}>GSU</span></span>
         </a>
 
         <div className={styles.desktopLinks}>
